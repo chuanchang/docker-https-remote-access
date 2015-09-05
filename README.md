@@ -12,7 +12,7 @@ Docker container to access remote site from a proxy container.
   
   deploy container :
   
-    $ docker run -d -p 443 -e REMOTE_SITE="https://en.wikipedia.org/" quantumobject/docker-https-remote-access
+    $ docker run -d -p 443 -e REMOTE_SITE="https://en.wikipedia.org" quantumobject/docker-https-remote-access
  
 Then you can access this container to the https://ip_container:port in your browser and I hope that allow to access from inside Chine to the wikipedia site. The port here is the one that docker will assignet to be internally connected to port 443 or you can define it by -p xxxx:443 (-p 443:443)
 
