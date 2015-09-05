@@ -5,7 +5,6 @@ mkdir /etc/apache2/ssl
 cd /etc/apache2/ssl
 
 
-rm -R /var/www/html
 rm /etc/apache2/sites-enabled/000-default.conf
 #to fix error relate to ip address of container apache2
 echo "ServerName localhost" | tee /etc/apache2/conf-available/fqdn.conf
