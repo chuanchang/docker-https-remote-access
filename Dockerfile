@@ -11,6 +11,8 @@ RUN apt-get update && apt-get install -y -q apache2 \
                     && rm -rf /tmp/* /var/tmp/*  \
                     && rm -rf /var/lib/apt/lists/*
                     
+ENV REMOTE_SITE  https://en.wikipedia.org/
+                    
 ##startup scripts  
 #Pre-config scrip that maybe need to be run one time only when the container run the first time .. using a flag to don't 
 #run it again ... use for conf for service ... when run the first time ...
