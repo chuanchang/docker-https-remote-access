@@ -9,8 +9,8 @@ else
       #code that need to run only one time ....
       a2ensite default-ssl
       
-      sed -i 's/ProxyPass \/ http:\/\/localhost\//ProxyPass \/ $REMOTE_SITE\//' /etc/apache2/sites-available/default-ssl.conf
-      sed -i 's/ProxyPassReverse \/ http:\/\/localhost\//ProxyPassReverse \/ $REMOTE_SITE\//' /etc/apache2/sites-available/default-ssl.conf
+      sed -i "s@ProxyPass / http://localhost/@ProxyPass / $REMOTE_SITE/@" /etc/apache2/sites-available/default-ssl.conf
+      sed -i "s@ProxyPassReverse / http://localhost/@ProxyPassReverse / $REMOTE_SITE/@" /etc/apache2/sites-available/default-ssl.conf
       
       #disable http
       rm /etc/apache2/sites-enabled/000-default.conf
