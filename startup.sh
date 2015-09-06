@@ -12,7 +12,7 @@ else
       sed -i "s@ProxyPassReverse / http://localhost/@ProxyPassReverse / $REMOTE_SITE/@" /etc/apache2/sites-available/default-ssl.conf
       a2ensite default-ssl
       
-      disable http
+      #disable http
       rm /etc/apache2/sites-enabled/000-default.conf
       sed -i 's/Listen 80/#Listen 80/' /etc/apache2/ports.conf
         
